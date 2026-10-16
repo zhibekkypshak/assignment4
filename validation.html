@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 3: Bootstrap Validation | Assignment 4</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Assignment 4</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Task 0: Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="html-validation.html">Task 1: HTML5</a></li>
+          <li class="nav-item"><a class="nav-link" href="bootstrap-form.html">Task 2: Bootstrap</a></li>
+          <li class="nav-item"><a class="nav-link active" href="validation.html">Task 3: Validation</a></li>
+          <li class="nav-item"><a class="nav-link" href="registration.html">Task 4: Registration</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container page">
+    <h1>Task 3. Bootstrap Validation Styles</h1>
+    <p class="text-muted">Bootstrap feedback classes <code>is-valid</code> / <code>is-invalid</code> with messages below the inputs.</p>
+
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="card shadow-sm">
+          <div class="card-body p-4">
+            <h2 class="h5 mb-3">Both states (static)</h2>
+            <div class="mb-3">
+              <label for="okEmail" class="form-label">Valid example</label>
+              <input type="email" class="form-control is-valid" id="okEmail" value="student@astanait.edu.kz">
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div>
+              <label for="badEmail" class="form-label">Invalid example</label>
+              <input type="email" class="form-control is-invalid" id="badEmail" value="">
+              <div class="invalid-feedback">Email is required</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="card shadow-sm">
+          <div class="card-body p-4">
+            <h2 class="h5 mb-3">Try it yourself</h2>
+            <form action="#" class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="John Smith" required minlength="2" maxlength="50">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Name is required (at least 2 characters).</div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Email is required and must be valid.</div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" required minlength="10" maxlength="200"></textarea>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Message is required (10–200 characters).</div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center text-muted py-4 mt-5 border-top">Assignment #4 · Forms and Validation · SE-2528 Kypshak Zhibek</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
